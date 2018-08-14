@@ -1,0 +1,13 @@
+{
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "material-icon-theme",
+    "materialTheme.fixIconsRunning": false,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.arrowParens": "always",
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true
+}
