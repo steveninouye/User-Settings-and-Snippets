@@ -19,3 +19,5 @@
 #### Misc
 
 -   Fira Code
+
+*   Inconsolata

@@ -10,6 +10,10 @@
     "prettier.arrowParens": "always",
     "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true
+    "editor.fontFamily": "Fira Code, Inconsolata",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "Inconsolata, Monospace",
+    "terminal.integrated.lineHeight": 1.1,
+    "terminal.integrated.fontSize": 16,
+    "window.zoomLevel": -0.001
 }
