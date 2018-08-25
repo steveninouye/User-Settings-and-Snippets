@@ -1,0 +1,22 @@
+{
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "material-icon-theme",
+    "materialTheme.fixIconsRunning": false,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.arrowParens": "always",
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
+    "editor.fontSize": 12.3,
+    "editor.fontFamily": "Fira Code, Inconsolata",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "Inconsolata, Monospace",
+    "terminal.integrated.lineHeight": 1.1,
+    "terminal.integrated.fontSize": 16,
+    "window.zoomLevel": -0.001,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000
+}
