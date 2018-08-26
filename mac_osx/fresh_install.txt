@@ -14,7 +14,8 @@ code --list-extensions | xargs -L 1 echo code --install-extension
 
 # create .bash_profile in home (~) directory
 ## write inside
-PS1="~\d \A \h[\u]: \w\n~"
+cat .bash_profile 
+PS1="\e[38;5;41m\]~\d \A \h[\u]: \w\n~\e[0m\]"
 alias gc="git commit -m "
 alias ga="git add ."
 export PATH=${PATH}:/usr/local/mysql/bin/
