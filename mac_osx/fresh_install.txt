@@ -1,0 +1,10 @@
+
+
+# install important applications
+brew install wget
+
+# bundle all applications
+brew bundle
+
+# bundle vs code extensions
+code --list-extensions | xargs -L 1 echo code --install-extension
