@@ -11,3 +11,8 @@ brew bundle
 
 # bundle vs code extensions
 code --list-extensions | xargs -L 1 echo code --install-extension
+
+# mac dark theme
+defaults write -g NSWindowDarkChocolate -bool TRUE
+
+# customize terminal color (http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)
