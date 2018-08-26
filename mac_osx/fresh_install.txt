@@ -12,8 +12,15 @@ brew bundle
 # bundle vs code extensions
 code --list-extensions | xargs -L 1 echo code --install-extension
 
-# mac dark theme
-defaults write -g NSWindowDarkChocolate -bool TRUE
+# create .bash_profile in home (~) directory
+## write inside
+PS1="~\d \t \h : \u : \W\n"
+alias gc="git commit -m "
+alias ga="git add ."
+export PATH=${PATH}:/usr/local/mysql/bin/
+export CLICOLOR=1
+export LSCOLORS=exfxcxdxbxegedabagacad
+~Sun Aug 26 10:56:30 MacMini : steveninouye : ~
 
 # customize terminal color (http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)
 ## terminal font
