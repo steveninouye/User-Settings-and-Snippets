@@ -1,4 +1,7 @@
-
+# install node JS
+brew install npm
+sudo npm install -g n
+sudo n latest
 
 # install important applications
 brew install wget
