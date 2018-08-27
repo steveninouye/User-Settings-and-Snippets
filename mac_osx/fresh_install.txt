@@ -30,9 +30,8 @@ Monaco 12 pt
 ## terminal preferences
 Display ANSI colors  # check the box
 
-## inside .bash_profile
-export CLICOLOR=1
-export LSCOLORS=exfxcxdxbxegedabagacad
+# execute .bash_profile to update terminal settings
+source .bash_profile
 
 ///////////////// backing up mac settings
 
