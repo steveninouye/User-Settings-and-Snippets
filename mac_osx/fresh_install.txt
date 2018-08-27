@@ -1,19 +1,18 @@
 # install homebrew
 https://brew.sh/
 
+# install important applications
+brew install wget
+
 # install node JS
 brew install npm
 sudo npm install -g n
 sudo n latest
 
-# install important applications
-brew install wget
-
-# bundle all applications
-brew bundle
-
-# bundle vs code extensions
-code --list-extensions | xargs -L 1 echo code --install-extension
+# install fonts
+brew tap caskroom/fonts
+brew cask install font-fira-code
+brew cask install font-inconsolata
 
 # create .bash_profile in home (~) directory
 ## write inside
@@ -29,10 +28,16 @@ export LSCOLORS=fxhecxdxbxegedabagacad
 Monaco 12 pt
 
 ## terminal preferences
-Display ANSI colors  # check
+Display ANSI colors  # check the box
 
 ## inside .bash_profile
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
+///////////////// backing up mac settings
 
+# bundle all applications
+brew bundle
+
+# bundle vs code extensions
+code --list-extensions | xargs -L 1 echo code --install-extension
