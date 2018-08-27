@@ -1,3 +1,6 @@
+# install homebrew
+https://brew.sh/
+
 # install node JS
 brew install npm
 sudo npm install -g n
