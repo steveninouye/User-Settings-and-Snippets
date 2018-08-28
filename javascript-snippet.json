@@ -6,17 +6,17 @@
     // Example:
     "Print to console": {
         "prefix": "clg",
-        "body": ["console.log(${1:'Hello World!'})$2"],
+        "body": ["console.log(${1:'Hello World!'})"],
         "description": "Log output to console"
     },
     "Console Log Variable": {
         "prefix": "cvar",
-        "body": ["console.log('${1:variable}: ', ${1:variable})$2"],
+        "body": ["console.log('${1:variable}: ', ${1:variable})"],
         "description": "Log output to console"
     },
     "Write a Large Arrow Function": {
         "prefix": "func",
-        "body": ["const ${1:name} = ($2) => {", "\t$3", "}$4"],
+        "body": ["const ${1:name} = ($2) => {", "\t$3", "}"],
         "description": "ArrowFunction Template"
     },
     "Write a Short Arrow Function": {
