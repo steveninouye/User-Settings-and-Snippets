@@ -1,8 +1,9 @@
 {
     "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.parameterHints": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "material-icon-theme",
-    "materialTheme.fixIconsRunning": false,
+    "materialTheme.fixIconsRunning": true,
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
     "prettier.tabWidth": 4,
@@ -18,5 +19,6 @@
     "terminal.integrated.fontSize": 16,
     "window.zoomLevel": -0.001,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000
+    "files.autoSaveDelay": 1000,
+    "extensions.ignoreRecommendations": false
 }
