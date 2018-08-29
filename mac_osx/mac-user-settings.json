@@ -1,6 +1,5 @@
 {
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.parameterHints": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "material-icon-theme",
     "materialTheme.fixIconsRunning": true,
