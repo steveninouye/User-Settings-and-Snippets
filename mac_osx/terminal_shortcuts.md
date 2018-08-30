@@ -1,0 +1,1 @@
+![](terminal_shortcuts.png)
