@@ -19,5 +19,6 @@
     "window.zoomLevel": -0.001,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
-    "extensions.ignoreRecommendations": false
+    "extensions.ignoreRecommendations": false,
+    "html.format.wrapAttributes": "aligned-multiple"
 }
