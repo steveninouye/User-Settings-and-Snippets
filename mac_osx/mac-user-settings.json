@@ -20,5 +20,6 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "extensions.ignoreRecommendations": false,
-    "html.format.wrapAttributes": "aligned-multiple"
+    "html.format.wrapAttributes": "aligned-multiple",
+    "editor.minimap.enabled": false
 }
