@@ -1,7 +1,7 @@
 '.source.ruby':  # Ruby
   'Print Variable To Console':
     'prefix': 'clg'
-    'body': 'print "${0:var} => "\np ${0:var}'
+    'body': 'print "${0:var} => "; p ${0:var}'
   'Print Hello World':
     'prefix': 'hw'
     'body': 'puts "Hello World!"'
