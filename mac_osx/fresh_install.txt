@@ -24,6 +24,12 @@ export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
 source ~/.bashrc
 
+# terminal default colors
+BACKGROUND = black
+TEXT = flora
+BOLD TEXT = black # default
+SELECTION = iron
+
 # customize terminal color (http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)
 ## terminal font
 Monaco 12 pt
