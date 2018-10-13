@@ -16,9 +16,10 @@ brew cask install font-inconsolata
 
 # create .bash_profile in home (~) directory
 ## write inside
-PS1="\e[38;5;41m\]$ \d \A \h[\u]: \w\n$ \e[0m\]"
+PS1="\e[3;37m\]💰 \d \A \h[\u]: \w 💰\n\e[0;37m\]💰 \e[0m\]"
 alias gac="git add -A && git commit -m "
 alias gp="git push"
+alias bsp="bundle exec rspec"
 export PATH=${PATH}:/usr/local/mysql/bin/
 export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
