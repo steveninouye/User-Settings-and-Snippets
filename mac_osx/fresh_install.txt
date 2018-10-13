@@ -17,11 +17,11 @@ brew cask install font-inconsolata
 # create .bash_profile in home (~) directory
 ## write inside
 PS1="\e[38;5;41m\]$ \d \A \h[\u]: \w\n$ \e[0m\]"
-alias gac="git add -A && git commit -m"
+alias gac="git add -A && git commit -m "
 alias gp="git push"
 export PATH=${PATH}:/usr/local/mysql/bin/
 export CLICOLOR=1
-export LSCOLORS=fxhecxdxbxegedabagacad
+export LSCOLORS=Gxheahdhfxegedabagacad
 source ~/.bashrc
 
 # customize terminal color (http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)
