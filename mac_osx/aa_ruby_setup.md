@@ -32,6 +32,12 @@ ruby -v        # => 2.3.1
 # check that we are using rbenv's version of ruby
 which ruby     # => /Users/your-username/.rbenv/shims/ruby
 ```
+
+## Install Gems
+```
+gem install bundler pry byebug
+```
+
 ## ~/.rspec
 Create a `.rspec` file in the home directory and insert the following
 ```
