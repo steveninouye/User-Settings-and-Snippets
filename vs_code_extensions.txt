@@ -1,3 +1,0 @@
-Bracket Pair Colorizer
-Material icon Theme
-Prettier - Code Formatter

@@ -35,13 +35,6 @@ git config --global user.name "your name here"
 # use the email associated with your GitHub account
 git config --global user.email your_email_here
 ```
-### NodeJS
-```
-# install node JS
-brew install npm
-sudo npm install -g n
-sudo n latest
-```
 ### Fonts
 ```
 # install fonts

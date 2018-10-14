@@ -1,4 +1,4 @@
-# Atom Text Editor Settings & Setup
+# Atom Text Editor Setup
 ## Snippets
 ```
 '.source.ruby':  # Ruby

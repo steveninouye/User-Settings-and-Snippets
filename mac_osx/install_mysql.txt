@@ -1,4 +1,0 @@
-go to
-https://dev.mysql.com/downloads/mysql/
-pick operating system
-download dmg file
