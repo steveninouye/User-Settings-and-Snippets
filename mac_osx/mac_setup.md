@@ -35,6 +35,11 @@ git config --global user.name "your name here"
 # use the email associated with your GitHub account
 git config --global user.email your_email_here
 ```
+
+#### Generating a new SSH key
+![](ssh_key_gen.png)
+![](new_ssh_agent.png)
+![](add_gh_ssh_key.png)
 ### Fonts
 ```
 # install fonts

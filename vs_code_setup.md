@@ -1,4 +1,8 @@
 # Visual Studio Code Setup
+## Install 'code' Command in PATH
+- Open Visual Studio Code
+- Open the Command Palette (⇧⌘P) and search for `Shell Command: Install 'code' command in PATH`
+
 ## User Settings
 Preferences > Settings > Open `settings.json`
 ```

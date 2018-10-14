@@ -1,4 +1,9 @@
 # Atom Text Editor Setup
+## Install 'atom' Shell Command
+- Open Atom
+- Open Command Palette (⇧⌘P) and search for `Window: Install Shell Commands`
+
+
 ## Snippets
 ```
 '.source.ruby':  # Ruby
