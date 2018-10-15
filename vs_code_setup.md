@@ -1,16 +1,18 @@
 # Visual Studio Code Setup
+
 ## Install 'code' Command in PATH
-- Open Visual Studio Code
-- Open the Command Palette (⇧⌘P) and search for `Shell Command: Install 'code' command in PATH`
+
+-   Open Visual Studio Code
+-   Open the Command Palette (⇧⌘P) and search for `Shell Command: Install 'code' command in PATH`
 
 ## User Settings
+
 Preferences > Settings > Open `settings.json`
+
 ```
 {
     "editor.acceptSuggestionOnCommitCharacter": false,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "material-icon-theme",
-    "materialTheme.fixIconsRunning": true,
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
     "prettier.tabWidth": 4,
@@ -23,23 +25,27 @@ Preferences > Settings > Open `settings.json`
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "Inconsolata, Monospace",
     "terminal.integrated.lineHeight": 1.1,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 14,
     "window.zoomLevel": -0.001,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "extensions.ignoreRecommendations": false,
     "html.format.wrapAttributes": "aligned-multiple",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "vscode-icons"
 }
 ```
 
 ## Extensions
-- Bracket Pair Colorizer 2
-- vscode-icons
-- Prettier
+
+-   Bracket Pair Colorizer 2
+-   vscode-icons
+-   Prettier
 
 ## Snippets
+
 ### JavaScript
+
 ```
 {
     "Print to console": {
