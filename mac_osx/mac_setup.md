@@ -72,6 +72,8 @@ _More Information to Customize Terminal Color at [Marina Mele's Site](http://www
 alias gac="git add -A && git commit -m "
 alias gp="git push"
 alias bsp="bundle exec rspec"
+alias psql_start="pg_ctl -D /usr/local/var/postgres start"
+alias psql_stop="pg_ctl -D /usr/local/var/postgres stop"
 export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
 export HISTIGNORE="clear"
@@ -86,6 +88,7 @@ last_was_blank() {
     export last_was_blank_PREVIOUS_LINE="$last_command"
     }
 PROMPT_COMMAND=last_was_blank
+source ~/.bashrc
 ```
 
 Run `.bash_profile`. In terminal run
