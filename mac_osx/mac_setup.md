@@ -77,7 +77,7 @@ alias psql_stop="pg_ctl -D /usr/local/var/postgres stop"
 export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
 export HISTIGNORE="clear"
-PS1="\e[0;37m\]💰 \d \A \h[\u]: \w 💰\n\e[0;37m\]💰 \e[0m\]"
+PS1="\[\e[0;37m\]💰 \d \A \h[\u]: \w 💰\n💰 \[\e[0m\]"
 HISTCONTROL=""
 last_was_blank() {
     local last_command="$(history 1)"
