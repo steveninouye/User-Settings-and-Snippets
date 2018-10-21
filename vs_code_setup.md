@@ -20,13 +20,14 @@ Preferences > Settings > Open `settings.json`
     "prettier.arrowParens": "always",
     "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
-    "editor.fontSize": 12.3,
+    "editor.fontSize": 12.5,
+    "editor.fontWeight": "400",
     "editor.fontFamily": "Fira Code, Inconsolata",
     "editor.fontLigatures": true,
     "editor.parameterHints.enabled": false,
-    "terminal.integrated.fontFamily": "Monaco",
+    "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
     "terminal.integrated.lineHeight": 1.1,
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 12.5,
     "terminal.letterSpacing": 2,
     "window.zoomLevel": -0.001,
     "files.autoSave": "afterDelay",
@@ -36,11 +37,11 @@ Preferences > Settings > Open `settings.json`
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
-        "terminal.foreground": "#16ff0e",
+        "terminal.foreground": "#0ae702",
         "terminalCursor.background": "#ffffff",
         "terminalCursor.foreground": "#504f4f"
     },
-    "terminal.integrated.fontWeight": "500"
+    "terminal.integrated.fontWeight": "400"
 }
 ```
 
