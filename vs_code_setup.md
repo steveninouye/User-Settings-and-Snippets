@@ -24,9 +24,9 @@ Preferences > Settings > Open `settings.json`
     "editor.fontFamily": "Fira Code, Inconsolata",
     "editor.fontLigatures": true,
     "editor.parameterHints.enabled": false,
-    "terminal.integrated.fontFamily": "Inconsolata, Monospace",
+    "terminal.integrated.fontFamily": "Monaco",
     "terminal.integrated.lineHeight": 1.1,
-    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontSize": 12,
     "terminal.letterSpacing": 2,
     "window.zoomLevel": -0.001,
     "files.autoSave": "afterDelay",
@@ -34,7 +34,13 @@ Preferences > Settings > Open `settings.json`
     "extensions.ignoreRecommendations": false,
     "html.format.wrapAttributes": "aligned-multiple",
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#16ff0e",
+        "terminalCursor.background": "#ffffff",
+        "terminalCursor.foreground": "#504f4f"
+    },
+    "terminal.integrated.fontWeight": "500"
 }
 ```
 
