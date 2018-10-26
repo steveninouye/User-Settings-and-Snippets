@@ -69,11 +69,11 @@ Create a `.bash_profile` in home directory and insert code inside.
 _More Information to Customize Terminal Color at [Marina Mele's Site](http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)_
 
 ```
-alias gac="git add -A && git commit -m "
+alias ga="git add"
+alias gc="git commit -m"
+# alias gac="git add -A && git commit -m "
 alias gp="git push"
 alias bsp="bundle exec rspec"
-alias psql_start="pg_ctl -D /usr/local/var/postgres start"
-alias psql_stop="pg_ctl -D /usr/local/var/postgres stop"
 export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
 export HISTIGNORE="clear"
