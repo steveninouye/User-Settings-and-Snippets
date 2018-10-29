@@ -74,20 +74,14 @@ alias gc="git commit -m"
 # alias gac="git add -A && git commit -m "
 alias gp="git push"
 alias bsp="bundle exec rspec"
+alias gca="git filter-branch -f --env-filter \"GIT_AUTHOR_NAME='Steven Inouye'; GIT_AUTHOR_EMAIL='steveninouye@msn.com'; GIT_COMMITTER_NAME='Steven Inouye'; GIT_COMMITTER_EMAIL='steveninouye@msn.com';\" HEAD; git remote add origin git@github.com:steveninouye/aA-W1D5.git; git pull origin master --no-edit --allow-unrelated-histories;"
 export CLICOLOR=1
-export LSCOLORS=Gxheahdhfxegedabagacad
-export HISTIGNORE="clear"
-PS1="\[\e[0;37m\]💰 \d \A \h[\u]: \w 💰\n💰 \[\e[0m\]"
-HISTCONTROL=""
-last_was_blank() {
-    local last_command="$(history 1)"
-    if [[ "$last_was_blank_PREVIOUS_LINE" != "$last_command" ]] ;
-    then
-    echo ""
-    fi
-    export last_was_blank_PREVIOUS_LINE="$last_command"
-    }
-PROMPT_COMMAND=last_was_blank
+export LSCOLORS=hegxahdhfxegedabagacad
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+PS1="\[\e[45m\]\[\e[37m\]💰 \d \A \h[\[\e[4;37m\]\u\[\e[0;37m\]\[\e[45m\]]: \w\[\e[3;37m\]\[\e[45m\]]\$(parse_git_branch) 💰\[\e[0m\] "
 source ~/.bashrc
 ```
 
