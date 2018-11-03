@@ -80,7 +80,7 @@ alias gc="git commit -m"
 alias gp="git push"
 alias bsp="bundle exec rspec"
 
-#####
+
 # gitauthor "Steven Inouye" "steveninouye@msn.com"
 
 function git_change_authorship {
@@ -91,8 +91,20 @@ function git_change_authorship {
     GIT_COMMITTER_EMAIL=\"$2\"
   "
 }
+alias gitauthor=git_change_authorship
 
-alias gitauthor=git_change_authorship 
+
+function make_and_change_directory {
+  case "$1" in
+    */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists
+    /*/../*) (cd "${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd -- "$1";;
+    /*) mkdir -p "$1" && cd "$1";;
+    */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "./$1";;
+    ../*) (cd .. && mkdir -p "${1#.}") && cd "$1";;
+    *) mkdir -p "./$1" && cd "./$1";;
+  esac
+}
+alias mkcd=make_and_change_directory
 ```
 
 ## ~/.bash_profile
