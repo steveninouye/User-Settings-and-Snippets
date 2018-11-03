@@ -62,6 +62,39 @@ brew cask install font-inconsolata
 
 ---
 
+## ~/.bashrc
+```
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
+## ~/.aliases
+```
+alias ga="git add"
+alias gc="git commit -m"
+# alias gac="git add -A && git commit -m "
+alias gp="git push"
+alias bsp="bundle exec rspec"
+
+#####
+# gitauthor "Steven Inouye" "steveninouye@msn.com"
+
+function git_change_authorship {
+  git filter-branch -f --env-filter "
+    GIT_AUTHOR_NAME=\"$1\"
+    GIT_AUTHOR_EMAIL=\"$2\"
+    GIT_COMMITTER_NAME=\"$1\"
+    GIT_COMMITTER_EMAIL=\"$2\"
+  "
+}
+
+alias gitauthor=git_change_authorship 
+```
+
 ## ~/.bash_profile
 
 Create a `.bash_profile` in home directory and insert code inside.
@@ -69,12 +102,6 @@ Create a `.bash_profile` in home directory and insert code inside.
 _More Information to Customize Terminal Color at [Marina Mele's Site](http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)_
 
 ```
-alias ga="git add"
-alias gc="git commit -m"
-# alias gac="git add -A && git commit -m "
-alias gp="git push"
-alias bsp="bundle exec rspec"
-alias gca="git filter-branch -f --env-filter \"GIT_AUTHOR_NAME='Steven Inouye'; GIT_AUTHOR_EMAIL='steveninouye@msn.com'; GIT_COMMITTER_NAME='Steven Inouye'; GIT_COMMITTER_EMAIL='steveninouye@msn.com';\" HEAD; git remote add origin git@github.com:steveninouye/aA-W1D5.git; git pull origin master --no-edit --allow-unrelated-histories;"
 export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
 parse_git_branch() {
@@ -83,6 +110,7 @@ parse_git_branch() {
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
 PS1="\[\e[45m\]\[\e[37m\]💰 \d \A \h[\[\e[4;37m\]\u\[\e[0;37m\]\[\e[45m\]]: \w\[\e[3;37m\]\[\e[44m\]\$(parse_git_branch)\[\e[45m\] 💰\[\e[0m\]\n💰"
 source ~/.bashrc
+source ~/.aliases
 ```
 
 Run `.bash_profile`. In terminal run
