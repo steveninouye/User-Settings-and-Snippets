@@ -78,6 +78,7 @@ alias ga="git add"
 alias gc="git commit -m"
 # alias gac="git add -A && git commit -m "
 alias gp="git push"
+alias gitclearcache="git rm . -r --cached"
 alias bsp="bundle exec rspec"
 
 
