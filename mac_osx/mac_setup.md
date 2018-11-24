@@ -2,13 +2,13 @@
 
 ## Applications
 
--   Google Chrome
--   Visual Studio Code
--   Atom
--   Discord
--   Slack
--   WeChat
--   WhatsApp
+- Google Chrome
+- Visual Studio Code
+- Atom
+- Discord
+- Slack
+- WeChat
+- WhatsApp
 
 ---
 
@@ -16,22 +16,22 @@
 
 ### Xcode
 
-```
+```bash
 xcode-select --install
 ```
 
 ### Homebrew
 
--   Get Homebrew at [https://brew.sh](https://brew.sh/)
--   After installing Homebrew install wget
+- Get Homebrew at [https://brew.sh](https://brew.sh/)
+- After installing Homebrew install wget
 
-```
+```bash
  brew install wget
 ```
 
 ### Git
 
-```
+```bash
 # install git
 brew install git
 
@@ -53,7 +53,7 @@ git config --global user.email your_email_here
 
 ### Fonts
 
-```
+```bash
 # install fonts
 brew tap caskroom/fonts
 brew cask install font-fira-code
@@ -63,7 +63,8 @@ brew cask install font-inconsolata
 ---
 
 ## ~/.bashrc
-```
+
+```bash
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -73,14 +74,16 @@ export NVM_DIR="$HOME/.nvm"
 ```
 
 ## ~/.aliases
-```
+
+```bash
 alias ga="git add"
 alias gc="git commit -m"
 # alias gac="git add -A && git commit -m "
 alias gp="git push"
 alias gitclearcache="git rm . -r --cached"
 alias bsp="bundle exec rspec"
-
+alias be="bundle exec"
+alias ber="bundle exec rails"
 
 # gitauthor "Steven Inouye" "steveninouye@msn.com"
 
@@ -114,21 +117,21 @@ Create a `.bash_profile` in home directory and insert code inside.
 
 _More Information to Customize Terminal Color at [Marina Mele's Site](http://www.marinamele.com/2014/05/customize-colors-of-your-terminal-in-mac-os-x.html)_
 
-```
+```bash
 export CLICOLOR=1
 export LSCOLORS=Gxheahdhfxegedabagacad
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-PS1="\[\e[45m\]\[\e[37m\]💰 \d \A \h[\[\e[4;37m\]\u\[\e[0;37m\]\[\e[45m\]]: \w\[\e[3;37m\]\[\e[44m\]\$(parse_git_branch)\[\e[45m\] 💰\[\e[0m\]\n💰"
+PS1="\[\e[37m\]\h[\u\[\e[37m\]]:\t \[\e[4;37m\]\$(parse_git_branch)\[\e[0;37m\] \W \[\e[0m\]"
 source ~/.bashrc
 source ~/.aliases
 ```
 
 Run `.bash_profile`. In terminal run
 
-```
+```bash
 source ~/.bash_profile
 ```
 
@@ -136,7 +139,7 @@ source ~/.bash_profile
 
 ## Terminal
 
-```
+```bash
 # terminal default colors
 BACKGROUND = black
 TEXT = flora
