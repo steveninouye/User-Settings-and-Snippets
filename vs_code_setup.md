@@ -43,8 +43,6 @@ Preferences > Settings > Open `settings.json`
    "window.zoomLevel": -0.001,
    "files.autoSave": "afterDelay",
    "files.autoSaveDelay": 1000,
-   "vscode_custom_css.imports": [""],
-   "vscode_custom_css.policy": true,
    "extensions.ignoreRecommendations": false,
    "html.format.wrapAttributes": "aligned-multiple",
    "editor.minimap.enabled": false,
