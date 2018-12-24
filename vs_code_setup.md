@@ -59,6 +59,7 @@ Preferences > Settings > Open `settings.json`
 
 This will give outline view for the file tree
 found in `/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/out/vs/workbench/workbench.main.css`
+Windows: `/mnt/c/Users/steve/AppData/Local/Programs/Microsoft\ VS\ Code/resources/app/out/vs/workbench`
 
 ```
 # Add to end of file
