@@ -31,7 +31,6 @@ const Root = ({ store }) => (
 export default Root;
 ```
 
-
 ```javascript
 // RootRoutes.jsx
 
@@ -53,6 +52,7 @@ export default RootRoutes;
 ```
 
 # Root Reducer
+
 - I named my reducers that didn't use `combineReducers` "Switch" so I could find it easier
 - I exported store straight from root reducer and configured it so `redux-logger` wouldn't run if in production
 
@@ -84,6 +84,7 @@ export default configureStore;
 ```
 
 # Set Current User
+
 Extract Current User from App.jsx for cleaner code
 
 ```javascript
@@ -98,8 +99,8 @@ import configureStore from './reducers/root_reducer';
 import setCurrentUser from './utils/set_current_user';
 
 document.addEventListener('DOMContentLoaded', () => {
-   let store = setCurrentUser(configureStore);
-   ReactDOM.render(<Root store={store} />, document.getElementById('root'));
+  let store = setCurrentUser(configureStore);
+  ReactDOM.render(<Root store={store} />, document.getElementById('root'));
 });
 ```
 
@@ -107,18 +108,18 @@ document.addEventListener('DOMContentLoaded', () => {
 // utils/set_current_user
 
 const setCurrentUser = (configureStore) => {
-   if (window.currentUser) {
-      const preloadedState = {
-         session: window.currentUser.id,
-         entities: {
-            users: { [window.currentUser.id]: window.currentUser }
-         }
-      };
-      delete window.currentUser;
-      return configureStore(preloadedState);
-   } else {
-      return configureStore();
-   }
+  if (window.currentUser) {
+    const preloadedState = {
+      session: window.currentUser.id,
+      entities: {
+        users: { [window.currentUser.id]: window.currentUser }
+      }
+    };
+    delete window.currentUser;
+    return configureStore(preloadedState);
+  } else {
+    return configureStore();
+  }
 };
 
 export default setCurrentUser;
@@ -126,17 +127,17 @@ export default setCurrentUser;
 
 # Use Rails Public Directory
 
-Anything you put into the `/public` directory is easily referenced in your HTML/CSS.  Great for static content or placeholders during CSS
+Anything you put into the `/public` directory is easily referenced in your HTML/CSS. Great for static content or placeholders during CSS
 
 Example:
+
 ```
 /public/puppy.jpg
 /public/images/smile.png
 ```
 
 ```html
-<img src="/puppy.jpg">
-<img src="/images/smile.png">
+<img src="/puppy.jpg" /> <img src="/images/smile.png" />
 ```
 
 # Optimize Your NPM Development Scripts
@@ -151,10 +152,12 @@ Use awesome libraries like `concurrently`
 }
 ```
 
-# Use WebPack Dev Server (Advance Users)
-If you are really good at webpack you can configure `webpack-dev-server` which will save you a lot of time because you won't need to reload your application ever time you update.  Webpack Dev Server automatically reloads your application for you which is super cool.
+## Use WebPack Dev Server (Advance Users)
+
+If you are really good at webpack you can configure `webpack-dev-server` which will save you a lot of time because you won't need to reload your application ever time you update. Webpack Dev Server automatically reloads your application for you which is super cool.
 
 # Minimize Your Production Build
+
 Add `-p` to your `webpack` command to minimize your javascipt build when you deploy
 
 ```json
@@ -168,17 +171,19 @@ package.json
 ```
 
 # Navigate Quickly
+
 Awesome hot keys
 
 `CMD + P` => search for a file
 
 `CMD + SHIFT + F` => search entire project
 
-`CMD + D` => Highlight *NOT* highlighted word
+`CMD + D` => Highlight _NOT_ highlighted word
 
 `CMD + SHIFT + L` => Highlight all strings in file matching highlighted section
 
 # Add Indent Lines To Your File Tree
+
 Add this to the bottom of this file:
 
 Mac: `/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/out/vs/workbench/workbench.main.css`
@@ -189,176 +194,176 @@ Linux: `/usr/share/code/resources/app/out/vs/workbench/workbench.main.css`
 
 ```css
 .monaco-tree-row {
-   overflow: visible;
-   position: relative;
+  overflow: visible;
+  position: relative;
 }
 
 .monaco-tree .monaco-tree-rows > .monaco-tree-row {
-   overflow: visible;
+  overflow: visible;
 }
 
 .monaco-tree-row:before {
-   content: '';
-   position: absolute;
-   width: 1px;
-   height: 100%;
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
 }
 
 .monaco-tree-row:after {
-   content: '';
-   background: rgba(255, 255, 255, 0.2);
-   position: absolute;
-   width: 24px;
-   height: 1px;
-   top: 50%;
+  content: '';
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  top: 50%;
 }
 
 .monaco-tree-row[aria-expanded]:after {
-   width: 12px;
+  width: 12px;
 }
 
 .monaco-tree-row[aria-level='2']:before {
-   box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='3']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='4']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='5']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='6']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -81px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -81px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='7']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='8']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -121px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -121px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='9']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -121px -11px 0 0 rgba(255, 255, 255, 0.2), -141px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -121px -11px 0 0 rgba(255, 255, 255, 0.2), -141px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='10']:before {
-   box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -121px -11px 0 0 rgba(255, 255, 255, 0.2), -141px -11px 0 0 rgba(255, 255, 255, 0.2),
-      -161px 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: -1px -11px 0 0 rgba(255, 255, 255, 0.2), -21px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -41px -11px 0 0 rgba(255, 255, 255, 0.2), -61px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -81px -11px 0 0 rgba(255, 255, 255, 0.2), -101px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -121px -11px 0 0 rgba(255, 255, 255, 0.2), -141px -11px 0 0 rgba(255, 255, 255, 0.2),
+    -161px 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .monaco-tree-row[aria-level='1'] {
-   padding-left: 0px !important;
+  padding-left: 0px !important;
 }
 .monaco-tree-row[aria-level='2'] {
-   padding-left: 20px !important;
+  padding-left: 20px !important;
 }
 .monaco-tree-row[aria-level='3'] {
-   padding-left: 40px !important;
+  padding-left: 40px !important;
 }
 .monaco-tree-row[aria-level='4'] {
-   padding-left: 60px !important;
+  padding-left: 60px !important;
 }
 .monaco-tree-row[aria-level='5'] {
-   padding-left: 80px !important;
+  padding-left: 80px !important;
 }
 .monaco-tree-row[aria-level='6'] {
-   padding-left: 100px !important;
+  padding-left: 100px !important;
 }
 .monaco-tree-row[aria-level='7'] {
-   padding-left: 120px !important;
+  padding-left: 120px !important;
 }
 .monaco-tree-row[aria-level='8'] {
-   padding-left: 140px !important;
+  padding-left: 140px !important;
 }
 .monaco-tree-row[aria-level='9'] {
-   padding-left: 160px !important;
+  padding-left: 160px !important;
 }
 .monaco-tree-row[aria-level='10'] {
-   padding-left: 180px !important;
+  padding-left: 180px !important;
 }
 
 .monaco-tree-row[aria-level='1']:before {
-   display: none;
+  display: none;
 }
 .monaco-tree-row[aria-level='2']:before {
-   left: 11px;
+  left: 11px;
 }
 .monaco-tree-row[aria-level='3']:before {
-   left: 31px;
+  left: 31px;
 }
 .monaco-tree-row[aria-level='4']:before {
-   left: 51px;
+  left: 51px;
 }
 .monaco-tree-row[aria-level='5']:before {
-   left: 71px;
+  left: 71px;
 }
 .monaco-tree-row[aria-level='6']:before {
-   left: 91px;
+  left: 91px;
 }
 .monaco-tree-row[aria-level='7']:before {
-   left: 111px;
+  left: 111px;
 }
 .monaco-tree-row[aria-level='8']:before {
-   left: 131px;
+  left: 131px;
 }
 .monaco-tree-row[aria-level='9']:before {
-   left: 151px;
+  left: 151px;
 }
 .monaco-tree-row[aria-level='10']:before {
-   left: 171px;
+  left: 171px;
 }
 
 .monaco-tree-row[aria-level='1']:after {
-   display: none;
+  display: none;
 }
 .monaco-tree-row[aria-level='2']:after {
-   left: 11px;
+  left: 11px;
 }
 .monaco-tree-row[aria-level='3']:after {
-   left: 31px;
+  left: 31px;
 }
 .monaco-tree-row[aria-level='4']:after {
-   left: 51px;
+  left: 51px;
 }
 .monaco-tree-row[aria-level='5']:after {
-   left: 71px;
+  left: 71px;
 }
 .monaco-tree-row[aria-level='6']:after {
-   left: 91px;
+  left: 91px;
 }
 .monaco-tree-row[aria-level='7']:after {
-   left: 111px;
+  left: 111px;
 }
 .monaco-tree-row[aria-level='8']:after {
-   left: 131px;
+  left: 131px;
 }
 .monaco-tree-row[aria-level='9']:after {
-   left: 151px;
+  left: 151px;
 }
 .monaco-tree-row[aria-level='10']:after {
-   left: 171px;
+  left: 171px;
 }
 ```
