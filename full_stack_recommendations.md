@@ -51,13 +51,14 @@ const RootRoutes = () => {
 export default RootRoutes;
 ```
 
-# Root Reducer
+# Configure Root Reducer (or Store)
 
-- I named my reducers that didn't use `combineReducers` "Switch" so I could find it easier
-- I exported store straight from root reducer and configured it so `redux-logger` wouldn't run if in production
+Configure root reducer (or store.js) so that it will only run the redux-logger when in development
 
 ```javascript
 // root_reducer.js
+// this might be split between your root_reducer.js and store.js file
+// I just combined root_reducer and store.js into one file
 
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
