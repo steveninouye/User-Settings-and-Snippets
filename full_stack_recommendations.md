@@ -184,7 +184,7 @@ Awesome hot keys
 
 # Add Indent Lines To Your File Tree
 
-Add this to the bottom of this file:
+Add this to the bottom of this file (VS Code will say there is a corrupt file but you can trust me _wink_ lol):
 
 Mac: `/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/out/vs/workbench/workbench.main.css`
 
