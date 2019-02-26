@@ -1,12 +1,14 @@
 # Add Indent Lines To Your File Tree
 
-Add this to the bottom of this file (VS Code will say there is a corrupt file but you can trust me _wink_ lol):
+Add this to the bottom of this file:
 
 Mac: `/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/out/vs/workbench/workbench.main.css`
 
-Windows: `/mnt/c/Users/steve/AppData/Local/Programs/Microsoft\ VS\ Code/resources/app/out/vs/workbench/workbench.main.css`
-
 Linux: `/usr/share/code/resources/app/out/vs/workbench/workbench.main.css`
+
+Windows: `/mnt/c/Users/<username>/AppData/Local/Programs/Microsoft\ VS\ Code/resources/app/out/vs/workbench/workbench.main.css`
+
+
 
 ```css
 .monaco-tree-row {

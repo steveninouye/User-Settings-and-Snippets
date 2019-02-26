@@ -131,3 +131,9 @@ Awesome hot keys
 `CMD + D` => Highlight _NOT_ highlighted word
 
 `CMD + SHIFT + L` => Highlight all strings in file matching highlighted section
+
+---
+
+---
+
+## [other stuff](https://github.com/steveninouye/User-Settings-and-Snippets/tree/master/full_stack_recommendations)
