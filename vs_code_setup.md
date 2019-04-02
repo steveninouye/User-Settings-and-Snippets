@@ -46,7 +46,7 @@ Preferences > Settings > Open `settings.json`
   "html.format.wrapAttributes": "aligned-multiple",
   "editor.minimap.enabled": false,
   "terminal.integrated.fontWeight": "400",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "vscode-great-icons",
   "workbench.colorTheme": "Monokai Night",
   "workbench.activityBar.visible": false,
   "explorer.autoReveal": false
