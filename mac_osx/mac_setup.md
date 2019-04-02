@@ -123,7 +123,7 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
-PS1="\[\e[37m\]\h[\u\[\e[37m\]]:\t \[\e[4;37m\]\$(parse_git_branch)\[\e[0;37m\] \W \[\e[0m\]"
+PS1="\[\e[0;31m\]\h[\u]:\t \[\e[4;37m\]\$(parse_git_branch)\[\e[0;31m\] \W \[\e[0m\]"
 source ~/.bashrc
 source ~/.aliases
 ```
