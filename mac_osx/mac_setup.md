@@ -141,14 +141,22 @@ source ~/.bash_profile
 ```bash
 # terminal default colors
 BACKGROUND = black
-TEXT = flora
-BOLD TEXT = black # default
+TEXT = white
+BOLD TEXT = white # default
 SELECTION = iron
 
 # customize terminal color
 ## terminal font
-Monaco 12 pt
+PT Mono 12pt
 
 ## terminal preferences
 Display ANSI colors  # check the box
+
+# Red next to black under ANSI Colors
+Change to bright red
+
+# Window Tab
+## Window Size
+Columns: 95
+Rows: 36
 ```
