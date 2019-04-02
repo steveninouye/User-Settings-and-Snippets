@@ -8,7 +8,7 @@
 ## Extensions
 
 - Bracket Pair Colorizer 2
-- vscode-icons
+- VSCode Great Icons
 - Prettier
 - Monokai Night
 - vscode styled components
