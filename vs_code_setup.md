@@ -13,6 +13,7 @@
 - Monokai Night
 - vscode styled components
 - GraphQL from VSCode
+- Simple Ruby ERB
 
 ## User Settings
 
