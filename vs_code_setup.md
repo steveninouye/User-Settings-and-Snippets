@@ -85,3 +85,27 @@ Preferences > Settings > Open `settings.json`
     }
 }
 ```
+
+## Keyboard shortcuts
+
+```
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "cmd+e",
+    "command": "erb.toggleTags",
+    "when": "editorTextFocus && editorLangId == erb"
+  },
+  { "key": "ctrl+1", "command": "workbench.action.terminal.focus" },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  { "key": "ctrl+z", "command": "workbench.action.toggleSidebarVisibility" }
+]
+```
