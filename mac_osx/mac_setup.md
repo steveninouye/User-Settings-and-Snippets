@@ -4,7 +4,6 @@
 
 - Google Chrome
 - Visual Studio Code
-- Atom
 - Discord
 - Slack
 - WeChat

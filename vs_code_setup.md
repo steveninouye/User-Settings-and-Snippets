@@ -2,18 +2,17 @@
 
 ## Install 'code' Command in PATH
 
--  Open Visual Studio Code
--  Open the Command Palette (⇧⌘P) and search for `Shell Command: Install 'code' command in PATH`
+- Open Visual Studio Code
+- Open the Command Palette (⇧⌘P) and search for `Shell Command: Install 'code' command in PATH`
 
 ## Extensions
 
--  Bracket Pair Colorizer 2
--  vscode-icons
--  Prettier
--  Custom CSS and JS Loader
--  Monokai Night
--  vscode styled components
--  GraphQL from VSCode
+- Bracket Pair Colorizer 2
+- VSCode Great Icons
+- Prettier
+- Monokai Night
+- vscode styled components
+- GraphQL from VSCode
 
 ## User Settings
 
@@ -21,35 +20,36 @@ Preferences > Settings > Open `settings.json`
 
 ```
 {
-   "editor.acceptSuggestionOnCommitCharacter": false,
-   "workbench.startupEditor": "newUntitledFile",
-   "editor.formatOnSave": true,
-   "editor.wordWrap": "on",
-   "editor.tabSize": 3,
-   "prettier.tabWidth": 3,
-   "prettier.singleQuote": true,
-   "prettier.arrowParens": "always",
-   "window.zoomLevel": 1,
-   "breadcrumbs.enabled": true,
-   "editor.fontSize": 12.5,
-   "editor.fontWeight": "400",
-   "editor.fontFamily": "Fira Code, Monaco",
-   "editor.fontLigatures": true,
-   "editor.parameterHints.enabled": false,
-   "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
-   "terminal.integrated.lineHeight": 1.1,
-   "terminal.integrated.fontSize": 12.5,
-   "terminal.letterSpacing": 2,
-   "window.zoomLevel": -0.001,
-   "files.autoSave": "afterDelay",
-   "files.autoSaveDelay": 1000,
-   "extensions.ignoreRecommendations": false,
-   "html.format.wrapAttributes": "aligned-multiple",
-   "editor.minimap.enabled": false,
-   "terminal.integrated.fontWeight": "400",
-   "workbench.iconTheme": "vscode-icons",
-   "workbench.colorTheme": "Monokai Night",
-   "workbench.activityBar.visible": true
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "always",
+  "breadcrumbs.enabled": true,
+  "editor.fontSize": 12.5,
+  "editor.fontWeight": "400",
+  "editor.fontFamily": "Fira Code, Monaco",
+  "editor.fontLigatures": true,
+  "editor.parameterHints.enabled": false,
+  "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
+  "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.fontSize": 13,
+  "window.zoomLevel": -0.2,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "vscode_custom_css.imports": [""],
+  "vscode_custom_css.policy": true,
+  "extensions.ignoreRecommendations": false,
+  "html.format.wrapAttributes": "aligned-multiple",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontWeight": "400",
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "Monokai Night",
+  "workbench.activityBar.visible": false,
+  "explorer.autoReveal": false
 }
 ```
 
