@@ -87,9 +87,9 @@ Preferences > Settings > Open `settings.json`
     80
   ],
   "workbench.colorCustomizations": {
-    "editor.selectionBackground": "#5e5f02",
-    "editor.selectionHighlightBackground": "#6b6b6b"
-},
+    "editor.selectionBackground": "#535353",
+    "editor.selectionHighlightBackground": "#535353"
+  },
 }
 ```
 
