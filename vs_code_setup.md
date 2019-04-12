@@ -54,6 +54,45 @@ Preferences > Settings > Open `settings.json`
 }
 ```
 
+```
+{
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "breadcrumbs.enabled": true,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "400",
+  "editor.fontFamily": "Fira Code, Monaco",
+  "editor.fontLigatures": true,
+  "editor.parameterHints.enabled": false,
+  "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
+  "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.fontSize": 13,
+  "window.zoomLevel": -1,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "extensions.ignoreRecommendations": false,
+  "html.format.wrapAttributes": "aligned-multiple",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontWeight": "400",
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "Monokai Night",
+  "workbench.activityBar.visible": true,
+  "explorer.autoReveal": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.rulers": [
+    80
+  ],
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#5e5f02",
+    "editor.selectionHighlightBackground": "#6b6b6b"
+},
+}
+```
+
 ## Snippets
 
 ### JavaScript
