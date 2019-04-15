@@ -56,39 +56,46 @@ Preferences > Settings > Open `settings.json`
 
 ```
 {
-  "eslint.enable": true,
-  "eslint.autoFixOnSave": true,
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "workbench.startupEditor": "newUntitledFile",
-  "editor.wordWrap": "on",
-  "editor.tabSize": 2,
   "breadcrumbs.enabled": true,
-  "editor.fontSize": 14,
-  "editor.fontWeight": "400",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.fontFamily": "Fira Code, Monaco",
   "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.fontWeight": "400",
+  "editor.minimap.enabled": false,
   "editor.parameterHints.enabled": false,
-  "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
-  "terminal.integrated.lineHeight": 1.1,
-  "terminal.integrated.fontSize": 13,
-  "window.zoomLevel": -1,
+    "editor.rulers": [
+      80
+    ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
+  "explorer.autoReveal": false,
+  "extensions.ignoreRecommendations": false,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "extensions.ignoreRecommendations": false,
   "html.format.wrapAttributes": "aligned-multiple",
-  "editor.minimap.enabled": false,
+  "prettier.eslintIntegration": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
+  "terminal.integrated.fontSize": 13,
   "terminal.integrated.fontWeight": "400",
-  "workbench.iconTheme": "vscode-great-icons",
-  "workbench.colorTheme": "Monokai Night",
+  "terminal.integrated.lineHeight": 1.1,
+  "window.zoomLevel": -1,
   "workbench.activityBar.visible": true,
-  "explorer.autoReveal": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.rulers": [
-    80
-  ],
   "workbench.colorCustomizations": {
     "editor.selectionBackground": "#575757",
     "editor.selectionHighlightBackground": "#575757"
+  },
+  "workbench.colorTheme": "Monokai Night",
+  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
 }
 ```
