@@ -38,17 +38,65 @@ brew install git
 git config --global color.ui true
 
 # this will mark you as the 'author' of each committed change
-git config --global user.name "your name here"
+git config --global user.name "Steven Inouye"
 
 # use the email associated with your GitHub account
-git config --global user.email your_email_here
+git config --global user.email steveninouye@msn.com
 ```
 
-#### Generating a new SSH key
+#### Generating a new SSH key [here](https://help.github.com/en/articles/connecting-to-github-with-ssh)
 
-![](ssh_key_gen.png)
-![](new_ssh_agent.png)
-![](add_gh_ssh_key.png)
+#### Generating a new SSH key
+Open Terminal.
+
+Paste the text below, substituting in your GitHub email address.
+
+```
+$ ssh-keygen -t rsa -b 4096 -C steveninouye@msn.com
+```
+
+This creates a new ssh key, using the provided email as a label.
+
+```
+> Generating public/private rsa key pair.
+```
+
+When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+
+```
+> Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]
+```
+
+At the prompt, type a secure passphrase. For more information, see "Working with SSH key passphrases".
+
+```
+> Enter passphrase (empty for no passphrase): [Type a passphrase]
+> Enter same passphrase again: [Type passphrase again]
+```
+
+#### Adding your SSH key to the ssh-agent
+Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key. When adding your SSH key to the agent, use the default macOS ssh-add command, and not an application installed by macports, homebrew, or some other external source.
+
+Start the ssh-agent in the background.
+```
+$ eval "$(ssh-agent -s)"
+> Agent pid 59566
+```
+
+If you're using macOS Sierra 10.12.2 or later, you will need to modify your ~/.ssh/config file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+
+```
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+```
+
+Add your SSH private key to the ssh-agent and store your passphrase in the keychain. If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_rsa in the command with the name of your private key file.
+
+```
+$ ssh-add -K ~/.ssh/id_rsa
+```
 
 ### Fonts
 
@@ -77,37 +125,35 @@ export NVM_DIR="$HOME/.nvm"
 ```bash
 alias ga="git add"
 alias gc="git commit -m"
-# alias gac="git add -A && git commit -m "
+alias gac="git add -A && git commit -m "
 alias gp="git push"
-alias gitclearcache="git rm . -r --cached"
-alias bsp="bundle exec rspec"
 alias be="bundle exec"
 alias ber="bundle exec rails"
 
 # gitauthor "Steven Inouye" "steveninouye@msn.com"
 
-function git_change_authorship {
-  git filter-branch -f --env-filter "
-    GIT_AUTHOR_NAME=\"$1\"
-    GIT_AUTHOR_EMAIL=\"$2\"
-    GIT_COMMITTER_NAME=\"$1\"
-    GIT_COMMITTER_EMAIL=\"$2\"
-  "
-}
-alias gitauthor=git_change_authorship
+# function git_change_authorship {
+#   git filter-branch -f --env-filter "
+#     GIT_AUTHOR_NAME=\"$1\"
+#     GIT_AUTHOR_EMAIL=\"$2\"
+#     GIT_COMMITTER_NAME=\"$1\"
+#     GIT_COMMITTER_EMAIL=\"$2\"
+#   "
+# }
+# alias gitauthor=git_change_authorship
 
 
-function make_and_change_directory {
-  case "$1" in
-    */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists
-    /*/../*) (cd "${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd -- "$1";;
-    /*) mkdir -p "$1" && cd "$1";;
-    */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "./$1";;
-    ../*) (cd .. && mkdir -p "${1#.}") && cd "$1";;
-    *) mkdir -p "./$1" && cd "./$1";;
-  esac
-}
-alias mkcd=make_and_change_directory
+# function make_and_change_directory {
+#   case "$1" in
+#     */..|*/../) cd -- "$1";; # that doesn't make any sense unless the directory already exists
+#     /*/../*) (cd "${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd -- "$1";;
+#     /*) mkdir -p "$1" && cd "$1";;
+#     */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "./$1";;
+#     ../*) (cd .. && mkdir -p "${1#.}") && cd "$1";;
+#     *) mkdir -p "./$1" && cd "./$1";;
+#   esac
+# }
+# alias mkcd=make_and_change_directory
 ```
 
 ## ~/.bash_profile
