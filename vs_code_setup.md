@@ -9,11 +9,11 @@
 
 - Bracket Pair Colorizer 2
 - VSCode Great Icons
-- Prettier
 - Monokai Night
-- vscode styled components
-- GraphQL from VSCode
 - Simple Ruby ERB
+- ESlint
+- Rubocop
+- Ruby
 
 ## User Settings
 
@@ -21,81 +21,38 @@ Preferences > Settings > Open `settings.json`
 
 ```
 {
-  "editor.acceptSuggestionOnCommitCharacter": false,
   "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Monokai Night",
+  "files.autoSave": "afterDelay",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.wordWrap": "on",
   "editor.formatOnSave": true,
-  "editor.wordWrap": "on",
   "editor.tabSize": 2,
-  "prettier.tabWidth": 2,
-  "prettier.singleQuote": true,
-  "prettier.arrowParens": "always",
+  "editor.rulers": [
+    80,
+    120
+  ],
   "breadcrumbs.enabled": true,
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 12,
   "editor.fontWeight": "400",
   "editor.fontFamily": "Fira Code, Monaco",
   "editor.fontLigatures": true,
   "editor.parameterHints.enabled": false,
   "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
   "terminal.integrated.lineHeight": 1.1,
-  "terminal.integrated.fontSize": 13,
-  "window.zoomLevel": -0.2,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "vscode_custom_css.imports": [""],
-  "vscode_custom_css.policy": true,
+  "terminal.integrated.fontSize": 12,
   "extensions.ignoreRecommendations": false,
   "html.format.wrapAttributes": "aligned-multiple",
   "editor.minimap.enabled": false,
   "terminal.integrated.fontWeight": "400",
-  "workbench.iconTheme": "vscode-great-icons",
-  "workbench.colorTheme": "Monokai Night",
   "workbench.activityBar.visible": false,
-  "explorer.autoReveal": false
-}
-```
-
-```
-{
-  "breadcrumbs.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.fontFamily": "Fira Code, Monaco",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.fontWeight": "400",
-  "editor.minimap.enabled": false,
-  "editor.parameterHints.enabled": false,
-    "editor.rulers": [
-      80
-    ],
-  "editor.tabSize": 2,
-  "editor.wordWrap": "on",
-  "eslint.autoFixOnSave": true,
-  "eslint.enable": true,
   "explorer.autoReveal": false,
-  "extensions.ignoreRecommendations": false,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-  "html.format.wrapAttributes": "aligned-multiple",
-  "prettier.eslintIntegration": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  "terminal.integrated.fontFamily": "Fira Code, Inconsolata, Monaco",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontWeight": "400",
-  "terminal.integrated.lineHeight": 1.1,
-  "window.zoomLevel": -1,
-  "workbench.activityBar.visible": true,
+  "editor.renderFinalNewline": true,
   "workbench.colorCustomizations": {
-    "editor.selectionBackground": "#575757",
-    "editor.selectionHighlightBackground": "#575757"
-  },
-  "workbench.colorTheme": "Monokai Night",
-  "workbench.iconTheme": "vscode-great-icons",
-  "workbench.startupEditor": "newUntitledFile",
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    // "editor.selectionBackground": "#575757",
+    // "editor.selectionHighlightBackground": "#575757"
   },
 }
 ```
